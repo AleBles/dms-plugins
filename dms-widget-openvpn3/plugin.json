@@ -1,0 +1,22 @@
+{
+  "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+  "id": "openvpn3",
+  "name": "OpenVPN 3",
+  "description": "Bar widget for the openvpn3-linux client: shows the session status, connects and disconnects imported profiles and imports .ovpn files, all through the openvpn3 CLI.",
+  "version": "0.1.0",
+  "author": "Ale Bles",
+  "license": "MIT",
+  "icon": "vpn_key",
+  "type": "widget",
+  "capabilities": ["dankbar-widget", "ipc"],
+  "category": "utilities",
+  "component": "./OpenVpn3.qml",
+  "settings": "./OpenVpn3Settings.qml",
+  "permissions": ["process", "settings_read", "settings_write"],
+  "dependencies": ["openvpn3"],
+  "requires_dms": ">=1.6.0",
+  "registry": {
+    "compositors": ["any"],
+    "distro": ["any"]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "Workspace OSD Flash": {
+    "Workspace OSD Flash": "Workspace OSD Flash"
+  },
+  "Briefly shows the workspace you switched to, centered on that screen. A new switch replaces the previous one immediately.": {
+    "Briefly shows the workspace you switched to, centered on that screen. A new switch replaces the previous one immediately.": "Toont kort het werkblad waarnaar je bent gewisseld, gecentreerd op dat scherm. Een nieuwe wissel vervangt de vorige meteen."
+  },
+  "Hold time": {
+    "Hold time": "Weergavetijd"
+  },
+  "How long the card stays before fading out": {
+    "How long the card stays before fading out": "Hoe lang de kaart zichtbaar blijft voordat deze uitvaagt"
+  },
+  "Fade-out duration": {
+    "Fade-out duration": "Uitvaagduur"
+  },
+  "0 follows the DMS animation speed setting": {
+    "0 follows the DMS animation speed setting": "0 volgt de DMS-instelling voor animatiesnelheid"
+  },
+  "Accent border": {
+    "Accent border": "Accentrand"
+  },
+  "Thin primary-coloured ring around the card, on top of the DMS surface styling": {
+    "Thin primary-coloured ring around the card, on top of the DMS surface styling": "Dunne rand in de primaire kleur rond de kaart, bovenop de DMS-oppervlaktestijl"
+  },
+  "Text size": {
+    "Text size": "Tekstgrootte"
+  },
+  "The card scales with the text": {
+    "The card scales with the text": "De kaart schaalt mee met de tekst"
+  },
+  "Show workspace name": {
+    "Show workspace name": "Werkbladnaam tonen"
+  },
+  "Include the workspace name when it has one": {
+    "Include the workspace name when it has one": "Toon de naam van het werkblad als het er een heeft"
+  },
+  "List open windows": {
+    "List open windows": "Open vensters tonen"
+  },
+  "Show the windows open on that workspace, one per line, under the label": {
+    "Show the windows open on that workspace, one per line, under the label": "Toon de vensters die op dat werkblad open staan, één per regel, onder het label"
+  },
+  "App lines show": {
+    "App lines show": "Appregels tonen"
+  },
+  "One line per window with its title, or app names grouped with a count": {
+    "One line per window with its title, or app names grouped with a count": "Eén regel per venster met de titel, of appnamen gegroepeerd met een aantal"
+  },
+  "Window titles (App · Title)": {
+    "Window titles (App · Title)": "Venstertitels (App · Titel)"
+  },
+  "App names only": {
+    "App names only": "Alleen app namen"
+  },
+  "App lines alignment": {
+    "App lines alignment": "Uitlijning appregels"
+  },
+  "Alignment of the window list under the label": {
+    "Alignment of the window list under the label": "Uitlijning van de vensterlijst onder het label"
+  },
+  "Left": {
+    "Left": "Links"
+  },
+  "Center": {
+    "Center": "Midden"
+  },
+  "Max characters per line": {
+    "Max characters per line": "Maximaal aantal tekens per regel"
+  },
+  "Longer lines are cut with an ellipsis; 0 disables the limit": {
+    "Longer lines are cut with an ellipsis; 0 disables the limit": "Langere regels worden afgekort met een beletselteken; 0 schakelt de limiet uit"
+  },
+  "Max lines": {
+    "Max lines": "Maximaal aantal regels"
+  },
+  "Further windows are folded into \"+N more\"": {
+    "Further windows are folded into \"+N more\"": "Overige vensters worden samengevat als \"+N meer\""
+  },
+  "Label style": {
+    "Label style": "Labelstijl"
+  },
+  "How the number and name are combined": {
+    "How the number and name are combined": "Hoe nummer en naam worden gecombineerd"
+  },
+  "Workspace 2: work": {
+    "Workspace 2: work": "Werkblad 2: werk"
+  },
+  "2 · work": {
+    "2 · work": "2 · werk"
+  },
+  "Name only (number if unnamed)": {
+    "Name only (number if unnamed)": "Alleen naam (nummer als er geen naam is)"
+  },
+  "Position": {
+    "Position": "Positie"
+  },
+  "Where the card appears on the screen": {
+    "Where the card appears on the screen": "Waar de kaart op het scherm verschijnt"
+  },
+  "Top": {
+    "Top": "Boven"
+  },
+  "Bottom": {
+    "Bottom": "Onder"
+  },
+  "Workspace %1: %2": {
+    "Workspace %1: %2": "Werkblad %1: %2"
+  },
+  "Workspace %1": {
+    "Workspace %1": "Werkblad %1"
+  },
+  "+%1 more": {
+    "+%1 more": "+%1 meer"
+  },
+  "Unsupported compositor": {
+    "Unsupported compositor": "Niet-ondersteunde compositor"
+  },
+  "Workspace OSD Flash needs Hyprland, niri, Mango, sway, Miracle WM, labwc or any compositor with ext-workspace-v1.": {
+    "Workspace OSD Flash needs Hyprland, niri, Mango, sway, Miracle WM, labwc or any compositor with ext-workspace-v1.": "Workspace OSD Flash heeft Hyprland, niri, Mango, sway, Miracle WM, labwc of een andere compositor met ext-workspace-v1 nodig."
+  }
+}

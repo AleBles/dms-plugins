@@ -1,0 +1,8 @@
+*.swp
+*~
+.DS_Store
+.qmlls.ini
+.idea/
+bun.lock
+node_modules/
+screenshots/*.part

@@ -1,0 +1,15 @@
+{
+  "id": "openvpn3",
+  "name": "OpenVPN 3",
+  "capabilities": ["dankbar-widget", "ipc"],
+  "category": "utilities",
+  "repo": "https://github.com/AleBles/dms-plugins",
+  "path": "dms-widget-openvpn3",
+  "author": "Ale Bles",
+  "description": "Bar widget for the openvpn3-linux client: shows the session status, connects and disconnects imported profiles and imports .ovpn files, all through the openvpn3 CLI.",
+  "dependencies": ["openvpn3"],
+  "compositors": ["any"],
+  "distro": ["any"],
+  "screenshot": "https://raw.githubusercontent.com/AleBles/dms-plugins/main/dms-widget-openvpn3/assets/screenshot.png",
+  "requires_dms": ">=1.6.0"
+}

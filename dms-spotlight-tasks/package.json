@@ -1,0 +1,24 @@
+{
+  "name": "dms-spotlight-tasks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dev tooling for the Spotlight Tasks DMS plugin; DMS itself never reads this file",
+  "license": "MIT",
+  "scripts": {
+    "registry": "bun scripts/registry.ts",
+    "registry:check": "bun scripts/registry.ts --check",
+    "reload": "dms ipc call plugin-scan reload spotlightTasks",
+    "open": "dms ipc call spotlight openQuery '+ '",
+    "add": "dms ipc call tasks add 'from the ipc bus'",
+    "status": "dms ipc call tasks status",
+    "serve": "dagr serve",
+    "test:hyprland": "dms-testbed run hyprland --plugin . && dms-testbed open hyprland '+ '",
+    "test:niri": "dms-testbed run niri --plugin . && dms-testbed open niri '+ '",
+    "test:reload": "dms-testbed reload hyprland spotlightTasks; dms-testbed reload niri spotlightTasks",
+    "test:shot": "mkdir -p screenshots; dms-testbed shot hyprland screenshots/hyprland.png; dms-testbed shot niri screenshots/niri.png",
+    "test:stop": "dms-testbed stop all"
+  },
+  "devDependencies": {
+    "dms-testbed": "github:AleBles/dms-testbed"
+  }
+}

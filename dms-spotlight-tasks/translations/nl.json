@@ -1,0 +1,77 @@
+{
+  "Enter to complete": {
+    "Enter to complete": "Enter om af te vinken"
+  },
+  "Dagr is not running": {
+    "Dagr is not running": "Dagr draait niet"
+  },
+  "Start it with: systemctl --user start dagr": {
+    "Start it with: systemctl --user start dagr": "Start het met: systemctl --user start dagr"
+  },
+  "Add task": {
+    "Add task": "Taak toevoegen"
+  },
+  "Leading ! marks raise the priority": {
+    "Leading ! marks raise the priority": "Elk ! aan het begin verhoogt de prioriteit"
+  },
+  "No open tasks": {
+    "No open tasks": "Geen open taken"
+  },
+  "Type to add one": {
+    "Type to add one": "Typ om er een toe te voegen"
+  },
+  "Added": {
+    "Added": "Toegevoegd"
+  },
+  "Completed": {
+    "Completed": "Afgevinkt"
+  },
+  "Delete task": {
+    "Delete task": "Taak verwijderen"
+  },
+  "Deleted": {
+    "Deleted": "Verwijderd"
+  },
+  "unknown error": {
+    "unknown error": "onbekende fout"
+  },
+  "Spotlight Tasks": {
+    "Spotlight Tasks": "Spotlight Tasks"
+  },
+  "Type the trigger in the launcher to search your open Dagr tasks; whatever you type is also offered as a new task. Enter on a task marks it done. Bind a key to: dms ipc call spotlight toggleQuery \"+ \"": {
+    "Type the trigger in the launcher to search your open Dagr tasks; whatever you type is also offered as a new task. Enter on a task marks it done. Bind a key to: dms ipc call spotlight toggleQuery \"+ \"": "Typ de trigger in de launcher om je open Dagr-taken te doorzoeken; wat je typt wordt ook aangeboden als nieuwe taak. Enter op een taak vinkt hem af. Koppel een toets aan: dms ipc call spotlight toggleQuery \"+ \""
+  },
+  "Needs Dagr's background service: systemctl --user enable --now dagr": {
+    "Needs Dagr's background service: systemctl --user enable --now dagr": "Vereist de achtergronddienst van Dagr: systemctl --user enable --now dagr"
+  },
+  "Trigger": {
+    "Trigger": "Trigger"
+  },
+  "Typed first in the launcher to show only this plugin. Use a symbol: a letter would hijack every search starting with it. Update your keybind when you change it.": {
+    "Typed first in the launcher to show only this plugin. Use a symbol: a letter would hijack every search starting with it. Update your keybind when you change it.": "Typ je als eerste in de launcher om alleen deze plugin te tonen. Gebruik een symbool: een letter kaapt elke zoekopdracht die ermee begint. Pas je sneltoets aan als je dit wijzigt."
+  },
+  "No trigger (always show)": {
+    "No trigger (always show)": "Geen trigger (altijd tonen)"
+  },
+  "Also list tasks among the normal launcher results": {
+    "Also list tasks among the normal launcher results": "Toon taken ook tussen de gewone launcher-resultaten"
+  },
+  "Tasks listed": {
+    "Tasks listed": "Aantal taken"
+  },
+  "How many matching tasks to show at once": {
+    "How many matching tasks to show at once": "Hoeveel passende taken tegelijk getoond worden"
+  },
+  "Confirm with a toast": {
+    "Confirm with a toast": "Bevestigen met een melding"
+  },
+  "Show a notification after adding, completing or deleting. Errors are always shown.": {
+    "Show a notification after adding, completing or deleting. Errors are always shown.": "Toon een melding na toevoegen, afvinken of verwijderen. Fouten worden altijd getoond."
+  },
+  "Socket path": {
+    "Socket path": "Socketpad"
+  },
+  "Empty uses the default, $XDG_RUNTIME_DIR/dagr/dagr.sock. Set this to follow a development build started with DAGR_SOCKET.": {
+    "Empty uses the default, $XDG_RUNTIME_DIR/dagr/dagr.sock. Set this to follow a development build started with DAGR_SOCKET.": "Leeg gebruikt de standaard, $XDG_RUNTIME_DIR/dagr/dagr.sock. Stel dit in om een ontwikkelversie te volgen die met DAGR_SOCKET is gestart."
+  }
+}

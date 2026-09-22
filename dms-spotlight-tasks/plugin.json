@@ -1,0 +1,28 @@
+{
+  "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+  "id": "spotlightTasks",
+  "name": "Spotlight Tasks",
+  "description": "Add and complete Dagr tasks from the DMS launcher; type to add, Enter on a task marks it done.",
+  "version": "0.1.0",
+  "author": "Ale Bles",
+  "license": "MIT",
+  "icon": "task_alt",
+  "type": "composite",
+  "trigger": "+",
+  "viewMode": "list",
+  "viewModeEnforced": false,
+  "capabilities": ["launcher", "daemon", "ipc"],
+  "category": "utilities",
+  "components": {
+    "daemon": "./SpotlightTasksDaemon.qml",
+    "launcher": "./SpotlightTasks.qml"
+  },
+  "settings": "./SpotlightTasksSettings.qml",
+  "dependencies": ["dagr"],
+  "permissions": ["settings_read", "settings_write"],
+  "requires_dms": ">=1.6.0",
+  "registry": {
+    "compositors": ["any"],
+    "distro": ["any"]
+  }
+}

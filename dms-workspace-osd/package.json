@@ -1,0 +1,19 @@
+{
+  "name": "dms-workspace-osd",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Dev tooling for the Workspace OSD Flash DMS plugin; DMS itself never reads this file",
+  "license": "MIT",
+  "scripts": {
+    "registry": "bun scripts/registry.ts",
+    "registry:check": "bun scripts/registry.ts --check",
+    "reload": "dms ipc call plugin-scan reload workspaceOsdFlash",
+    "flash": "dms ipc call wsosd flash 'Workspace 2: work' ''",
+    "test:hyprland": "dms-testbed run hyprland --plugin . && dms-testbed open hyprland",
+    "test:reload": "dms-testbed reload hyprland workspaceOsdFlash",
+    "test:stop": "dms-testbed stop all"
+  },
+  "devDependencies": {
+    "dms-testbed": "github:AleBles/dms-testbed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "OpenVPN 3": {
+    "OpenVPN 3": "OpenVPN 3"
+  },
+  "Shows the openvpn3-linux session status in the bar. Click the pill for the profile list (connect, disconnect, import), right-click to toggle the connection. Web-based logins open in your browser.": {
+    "Shows the openvpn3-linux session status in the bar. Click the pill for the profile list (connect, disconnect, import), right-click to toggle the connection. Web-based logins open in your browser.": "Toont de status van de openvpn3-linux-sessie in de balk. Klik op de pil voor de profielenlijst (verbinden, verbreken, importeren), rechtsklik om de verbinding om te schakelen. Weblogins openen in je browser."
+  },
+  "Show profile name": {
+    "Show profile name": "Profielnaam tonen"
+  },
+  "Show the name of the connected profile next to the icon (horizontal bars only)": {
+    "Show the name of the connected profile next to the icon (horizontal bars only)": "Toon de naam van het verbonden profiel naast het icoon (alleen bij horizontale balken)"
+  },
+  "Name width": {
+    "Name width": "Naambreedte"
+  },
+  "Longer profile names are cut with an ellipsis so the pill does not crowd the bar": {
+    "Longer profile names are cut with an ellipsis so the pill does not crowd the bar": "Langere profielnamen worden afgekort met een beletselteken zodat de pil de balk niet volpropt"
+  },
+  "Status refresh": {
+    "Status refresh": "Statusverversing"
+  },
+  "How often the session status is read from openvpn3 while idle or connected. Connecting sessions and the open popout refresh every second": {
+    "How often the session status is read from openvpn3 while idle or connected. Connecting sessions and the open popout refresh every second": "Hoe vaak de sessiestatus uit openvpn3 wordt gelezen zolang er niets gebeurt of de verbinding staat. Tijdens het verbinden en met de popout open wordt elke seconde ververst"
+  },
+  "Open login page as fallback": {
+    "Open login page as fallback": "Inlogpagina openen als terugvaloptie"
+  },
+  "openvpn3 opens the web login page itself. When it reports that it could not, open the URL it prints (xdg-open). The popout always offers the page under Open login page": {
+    "openvpn3 opens the web login page itself. When it reports that it could not, open the URL it prints (xdg-open). The popout always offers the page under Open login page": "openvpn3 opent de weblogin zelf. Meldt het dat dat niet lukte, open dan de afgedrukte URL (xdg-open). De popout biedt de pagina altijd aan onder Inlogpagina openen"
+  },
+  "Persistent import": {
+    "Persistent import": "Blijvend importeren"
+  },
+  "Keep imported profiles across reboots (openvpn3 config-import --persistent)": {
+    "Keep imported profiles across reboots (openvpn3 config-import --persistent)": "Bewaar geïmporteerde profielen ook na een herstart (openvpn3 config-import --persistent)"
+  },
+  "Default profile": {
+    "Default profile": "Standaardprofiel"
+  },
+  "Profile connected by right-click and by \"dms ipc call openvpn3 toggle\". Leave empty to use the most recently used profile": {
+    "Profile connected by right-click and by \"dms ipc call openvpn3 toggle\". Leave empty to use the most recently used profile": "Profiel dat verbindt via rechtsklik en via \"dms ipc call openvpn3 toggle\". Laat leeg om het laatst gebruikte profiel te nemen"
+  },
+  "most recently used": {
+    "most recently used": "laatst gebruikt"
+  },
+  "openvpn3 is not installed": {
+    "openvpn3 is not installed": "openvpn3 is niet geïnstalleerd"
+  },
+  "Connected to %1": {
+    "Connected to %1": "Verbonden met %1"
+  },
+  "Connecting to %1…": {
+    "Connecting to %1…": "Verbinden met %1…"
+  },
+  "Waiting for web login": {
+    "Waiting for web login": "Wacht op weblogin"
+  },
+  "Paused": {
+    "Paused": "Gepauzeerd"
+  },
+  "Disconnecting…": {
+    "Disconnecting…": "Verbinding verbreken…"
+  },
+  "Connection failed": {
+    "Connection failed": "Verbinding mislukt"
+  },
+  "Disconnected": {
+    "Disconnected": "Niet verbonden"
+  },
+  "Could not start the session": {
+    "Could not start the session": "De sessie kon niet worden gestart"
+  },
+  "Import failed": {
+    "Import failed": "Importeren mislukt"
+  },
+  "Profile imported": {
+    "Profile imported": "Profiel geïmporteerd"
+  },
+  "Import OpenVPN profile": {
+    "Import OpenVPN profile": "OpenVPN-profiel importeren"
+  },
+  "Open login page": {
+    "Open login page": "Inlogpagina openen"
+  },
+  "No profiles imported yet": {
+    "No profiles imported yet": "Nog geen profielen geïmporteerd"
+  },
+  "Install the openvpn3 client and refresh": {
+    "Install the openvpn3 client and refresh": "Installeer de openvpn3-client en ververs"
+  },
+  "Import profile…": {
+    "Import profile…": "Profiel importeren…"
+  },
+  "Delete profile": {
+    "Delete profile": "Profiel verwijderen"
+  },
+  "Delete \"%1\" from openvpn3? You can import the .ovpn file again later.": {
+    "Delete \"%1\" from openvpn3? You can import the .ovpn file again later.": "\"%1\" uit openvpn3 verwijderen? Je kunt het .ovpn-bestand later opnieuw importeren."
+  },
+  "Delete": {
+    "Delete": "Verwijderen"
+  },
+  "Disconnect %1 before deleting it": {
+    "Disconnect %1 before deleting it": "Verbreek de verbinding met %1 voordat je het verwijdert"
+  },
+  "Could not delete the profile": {
+    "Could not delete the profile": "Het profiel kon niet worden verwijderd"
+  },
+  "Profile deleted": {
+    "Profile deleted": "Profiel verwijderd"
+  },
+  "Refresh": {
+    "Refresh": "Verversen"
+  }
+}
