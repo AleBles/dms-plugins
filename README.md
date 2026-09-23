@@ -7,7 +7,7 @@ so a plugin works whether it is used from here or copied out on its own.
 | Plugin | Id | What it does |
 | --- | --- | --- |
 | [dms-workspace-osd](dms-workspace-osd) | `workspaceOsdFlash` | Flashes the id and name of the workspace you switched to, centered on that screen |
-| [dms-workspace-swapper](dms-workspace-swapper) | `workspaceSwapper` | Popup that renumbers the current workspace, swapping with whatever holds that number |
+| [dms-hyprland-workspace-swapper](dms-hyprland-workspace-swapper) | `workspaceSwapper` | Popup that renumbers the current workspace, swapping with whatever holds that number |
 | [dms-spotlight-tasks](dms-spotlight-tasks) | `spotlightTasks` | Add and complete Dagr tasks from the DMS launcher |
 | [dms-widget-openvpn3](dms-widget-openvpn3) | `openvpn3` | Bar widget for the openvpn3-linux client |
 
@@ -17,7 +17,7 @@ DMS loads anything under `~/.config/DankMaterialShell/plugins/`, so a symlink is
 
 ```sh
 git clone https://github.com/AleBles/dms-plugins
-ln -s "$PWD/dms-plugins/dms-workspace-swapper" ~/.config/DankMaterialShell/plugins/workspace-swapper
+ln -s "$PWD/dms-plugins/dms-hyprland-workspace-swapper" ~/.config/DankMaterialShell/plugins/hyprland-workspace-swapper
 dms restart
 dms ipc call plugins enable workspaceSwapper
 ```
@@ -31,7 +31,7 @@ so restart before trusting a test.
 Each plugin carries its own `package.json` with bun scripts:
 
 ```sh
-cd dms-workspace-swapper
+cd dms-hyprland-workspace-swapper
 bun run registry          # regenerate registry/<owner>-<plugin>.json from plugin.json
 bun run registry:check    # fail if that file is missing or stale
 bun run reload            # ask DMS to reload just this plugin

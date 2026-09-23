@@ -1,8 +1,9 @@
-// Workspace Swapper — DMS daemon plugin.
+// Hyprland Workspace Swapper — DMS daemon plugin.
 // Popup that reassigns the focused workspace to another number. Free numbers are plain, occupied ones
 // are dimmed and show what is on them; picking an occupied number swaps the two workspaces.
 // The DMS rename dialog stores names as "<id> <name>", so the label is rewritten to follow the new id.
-// IPC:  dms ipc call workspace-swapper open | close | toggle
+// The key combo comes from the plugin settings and is registered with Hyprland at runtime (see below).
+// IPC:  dms ipc call workspace-swapper open | close | toggle | setKeybind "<combo>"
 import QtQuick
 import Quickshell
 import Quickshell.Io
@@ -118,6 +119,8 @@ PluginComponent {
         function open(): void { root.open(); }
         function close(): void { root.close(); }
         function toggle(): void { root.toggle(); }
+        // Same as the "Key combo" field in the plugin settings; "" removes the plugin's bind.
+        function setKeybind(combo: string): void { root.saveKeybind(combo); }
     }
 
     // ---- applying the change -----------------------------------------------------------------
@@ -157,13 +160,130 @@ PluginComponent {
         onTriggered: {
             if (root.queue.length === 0) {
                 stop();
-                Hyprland.refreshWorkspaces();
+                resync.running = true;
                 return;
             }
             const next = root.queue[0];
             root.queue = root.queue.slice(1);
             Hyprland.dispatch(next);
         }
+    }
+
+    // Hyprland announces a renumber as a "changeworkspaceid" event, which Quickshell does not handle, so
+    // its workspace list keeps the workspace under the old number. The bar then shows a ghost entry, and
+    // clicking it makes Hyprland create a real, empty workspace with the old number next to the renamed
+    // one. Hyprland.refreshWorkspaces() cannot repair that: from QML it only updates entries it already
+    // knows and never adds or removes any. The one event that makes Quickshell rebuild its workspace,
+    // monitor and window lists from scratch is "configreloaded", so a config-only reload (no monitor
+    // reset) is issued once the queue has drained.
+    Process {
+        id: resync
+        command: ["hyprctl", "reload", "config-only"]
+        onExited: (exitCode, exitStatus) => {
+            if (exitCode !== 0)
+                console.warn("[workspaceSwapper] hyprctl reload config-only exited with " + exitCode);
+        }
+    }
+
+    // ---- keybind -------------------------------------------------------------------------------
+    // The combo is a plugin setting ("keybind"). It is registered through Hyprland's Lua API with
+    // `hyprctl eval`, so no config file is written: the DMS keybind store rewrites binds-user.lua and drops
+    // everything in it that is not a bind line. Runtime binds do not survive a config reload, including the
+    // config-only reload this plugin issues after a renumber, so "configreloaded" puts the bind back.
+    readonly property string toggleCommand: "dms ipc call workspace-swapper toggle"
+    property string keybind: ""          // wanted, normalised ("" = the user binds the command themselves)
+    property string appliedKeybind: ""   // what Hyprland currently holds for us
+    property bool bindPending: false
+
+    // "ctrl+shift+i" -> "CTRL + SHIFT + I" is not attempted: Hyprland key names are case-sensitive, so only
+    // the spacing around "+" is normalised.
+    function normalizeCombo(combo) {
+        return String(combo || "").split("+").map(p => p.trim()).filter(p => p !== "").join(" + ");
+    }
+
+    function luaString(value) {
+        return "\"" + String(value).replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+    }
+
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        keybind = normalizeCombo(pluginService.loadPluginData(pluginId, "keybind", ""));
+        applyKeybind();
+    }
+
+    function saveKeybind(combo) {
+        if (!pluginService)
+            return;
+        pluginService.savePluginData(pluginId, "keybind", normalizeCombo(combo));
+    }
+
+    function applyKeybind() {
+        if (!CompositorService.isHyprland || keybind === appliedKeybind)
+            return;
+        if (binder.running) {
+            bindPending = true;
+            return;
+        }
+        const lua = [];
+        if (appliedKeybind !== "")
+            lua.push("hl.unbind(" + luaString(appliedKeybind) + ")");
+        if (keybind !== "")
+            lua.push("hl.bind(" + luaString(keybind) + ", hl.dsp.exec_cmd(" + luaString(toggleCommand) + "), { description = " + luaString(I18n.trFor("workspaceSwapper", "Renumber this workspace")) + " })");
+        binder.wanted = keybind;
+        binder.command = ["hyprctl", "eval", lua.join("; ")];
+        binder.running = true;
+    }
+
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
+
+    Connections {
+        target: root.pluginService
+        enabled: root.pluginService !== null
+        function onPluginDataChanged(id) {
+            if (id === root.pluginId)
+                root.loadSettings();
+        }
+    }
+
+    Connections {
+        target: Hyprland
+        enabled: CompositorService.isHyprland
+        function onRawEvent(event) {
+            if (event.name !== "configreloaded")
+                return;
+            root.appliedKeybind = "";
+            root.applyKeybind();
+        }
+    }
+
+    Process {
+        id: binder
+        property string wanted: ""
+        stdout: StdioCollector {}
+        stderr: StdioCollector {}
+        onExited: (exitCode, exitStatus) => {
+            const output = (stdout.text + stderr.text).trim();
+            if (exitCode === 0) {
+                root.appliedKeybind = wanted;
+            } else {
+                // The unbind runs first, so whatever we had is gone either way.
+                root.appliedKeybind = "";
+                console.warn("[workspaceSwapper] could not bind " + wanted + ": " + output);
+                ToastService.showWarning(I18n.trFor("workspaceSwapper", "Hyprland Workspace Swapper: could not bind %1").arg(wanted), output.replace(/^error: .*?:\d+: /, ""));
+            }
+            if (root.bindPending) {
+                root.bindPending = false;
+                root.applyKeybind();
+            }
+        }
+    }
+
+    // Unloading (disable, reload) takes the bind with it instead of leaving a key that calls into nothing.
+    Component.onDestruction: {
+        if (appliedKeybind !== "")
+            Quickshell.execDetached(["hyprctl", "eval", "hl.unbind(" + luaString(appliedKeybind) + ")"]);
     }
 
     // ---- popup ---------------------------------------------------------------------------------

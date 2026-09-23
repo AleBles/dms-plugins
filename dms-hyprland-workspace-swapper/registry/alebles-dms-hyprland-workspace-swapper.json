@@ -1,15 +1,15 @@
 {
   "id": "workspaceSwapper",
-  "name": "Workspace Swapper",
+  "name": "Hyprland Workspace Swapper",
   "capabilities": ["daemon"],
   "category": "utilities",
   "repo": "https://github.com/AleBles/dms-plugins",
-  "path": "dms-workspace-swapper",
+  "path": "dms-hyprland-workspace-swapper",
   "author": "Ale Bles",
   "description": "Popup that gives the current workspace a different number, swapping places with the workspace that already holds it and keeping the names in step.",
   "dependencies": [],
   "compositors": ["hyprland"],
   "distro": ["any"],
-  "screenshot": "https://raw.githubusercontent.com/AleBles/dms-plugins/main/dms-workspace-swapper/assets/screenshot.png",
+  "screenshot": "https://raw.githubusercontent.com/AleBles/dms-plugins/main/dms-hyprland-workspace-swapper/assets/screenshot.png",
   "requires_dms": ">=1.6.0"
 }

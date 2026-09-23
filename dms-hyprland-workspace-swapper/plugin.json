@@ -1,9 +1,9 @@
 {
   "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
   "id": "workspaceSwapper",
-  "name": "Workspace Swapper",
+  "name": "Hyprland Workspace Swapper",
   "description": "Popup that gives the current workspace a different number, swapping places with the workspace that already holds it and keeping the names in step.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Ale Bles",
   "license": "MIT",
   "icon": "swap_horiz",
@@ -12,7 +12,12 @@
     "daemon"
   ],
   "component": "./WorkspaceSwapper.qml",
-  "permissions": [],
+  "settings": "./WorkspaceSwapperSettings.qml",
+  "permissions": [
+    "process",
+    "settings_read",
+    "settings_write"
+  ],
   "requires_dms": ">=1.6.0",
   "category": "utilities",
   "dependencies": [],

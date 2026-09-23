@@ -1,15 +1,15 @@
 {
-  "name": "dms-workspace-swapper",
+  "name": "dms-hyprland-workspace-swapper",
   "version": "0.1.0",
   "private": true,
-  "description": "Dev tooling for the Workspace Swapper DMS plugin; DMS itself never reads this file",
+  "description": "Dev tooling for the Hyprland Workspace Swapper DMS plugin; DMS itself never reads this file",
   "license": "MIT",
   "scripts": {
     "registry": "bun scripts/registry.ts",
     "registry:check": "bun scripts/registry.ts --check",
     "reload": "dms ipc call plugin-scan reload workspaceSwapper",
     "open": "dms ipc call workspace-swapper toggle",
-    "test:hyprland": "dms-testbed run hyprland --plugin . && dms-testbed open hyprland",
+    "test:hyprland": "dms-testbed run hyprland --plugin . && dms-testbed ipc hyprland plugins enable workspaceSwapper && dms-testbed ipc hyprland workspace-swapper open",
     "test:reload": "dms-testbed reload hyprland workspaceSwapper",
     "test:shot": "mkdir -p screenshots; dms-testbed shot hyprland screenshots/hyprland.png",
     "test:stop": "dms-testbed stop all"
