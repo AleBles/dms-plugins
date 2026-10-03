@@ -49,11 +49,15 @@ dms plugins install workspaceOsdFlash
 
 Update later with `dms plugins update workspaceOsdFlash`; remove with `dms plugins uninstall workspaceOsdFlash`.
 
+The plugin moved from `AleBles/dms-workspace-osd` into the [dms-plugins](https://github.com/AleBles/dms-plugins)
+monorepo in 0.2.1. `dms plugins update` keeps pulling from the repository it was installed from, so an
+older install switches over only after `dms plugins uninstall workspaceOsdFlash` and a fresh install.
+
 ### Manual
 
 ```sh
-git clone https://github.com/AleBles/dms-workspace-osd \
-  ~/.config/DankMaterialShell/plugins/workspace-osd-flash
+git clone https://github.com/AleBles/dms-plugins
+ln -s "$PWD/dms-plugins/dms-workspace-osd" ~/.config/DankMaterialShell/plugins/workspace-osd-flash
 dms restart
 ```
 

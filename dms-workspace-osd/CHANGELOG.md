@@ -3,6 +3,15 @@
 All notable changes to Workspace OSD Flash are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] - 2026-10-03
+
+### Changed
+- The card label and window lines use DMS `StyledText` instead of raw `Text`, so they follow the
+  shell's font family and text rendering settings.
+- Development moved to the [dms-plugins](https://github.com/AleBles/dms-plugins) monorepo; the
+  registry entry now points there. Existing installs keep updating from the old repository until reinstalled.
+- Registry compositor name for Miracle WM is `miracle-wm`, matching the published entry.
+
 ## [0.2.0] - 2026-09-17
 
 ### Added

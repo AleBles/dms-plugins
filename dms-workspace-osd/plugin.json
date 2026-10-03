@@ -3,7 +3,7 @@
   "id": "workspaceOsdFlash",
   "name": "Workspace OSD Flash",
   "description": "Briefly shows the id and name of the workspace you just switched to, centered on that screen. Hyprland, niri, Mango, sway, Miracle WM, labwc and other ext-workspace compositors.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Ale Bles",
   "license": "MIT",
   "icon": "preview",
@@ -29,7 +29,7 @@
       "mangowc",
       "sway",
       "labwc",
-      "miracle"
+      "miracle-wm"
     ]
   }
 }

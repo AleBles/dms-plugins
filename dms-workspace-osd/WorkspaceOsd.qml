@@ -247,12 +247,11 @@ PluginComponent {
                     id: content
                     anchors.centerIn: parent
                     spacing: Math.round(root.fontSize * 0.18)
-                    Text {
+                    StyledText {
                         id: label
                         anchors.horizontalCenter: parent.horizontalCenter
                         text: root.text
                         color: Theme.surfaceText
-                        font.family: Theme.fontFamily
                         font.pixelSize: root.fontSize
                         font.weight: Font.DemiBold
                     }
@@ -279,13 +278,13 @@ PluginComponent {
                             model: root.apps
                             onItemAdded: Qt.callLater(appsList.recompute)
                             onItemRemoved: Qt.callLater(appsList.recompute)
-                            Text {
+                            StyledText {
                                 required property string modelData
                                 text: modelData
                                 color: Theme.surfaceVariantText
-                                font.family: Theme.fontFamily
                                 font.pixelSize: Math.max(Theme.fontSizeSmall, Math.round(root.fontSize * 0.38))
                                 font.weight: Font.Medium
+                                wrapMode: Text.NoWrap
                                 elide: Text.ElideRight
                                 maximumLineCount: 1
                                 width: appsList.contentWidth > 0 ? appsList.contentWidth : Math.min(implicitWidth, appsList.maxLineWidth)

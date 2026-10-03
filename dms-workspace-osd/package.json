@@ -1,6 +1,6 @@
 {
   "name": "dms-workspace-osd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "Dev tooling for the Workspace OSD Flash DMS plugin; DMS itself never reads this file",
   "license": "MIT",
