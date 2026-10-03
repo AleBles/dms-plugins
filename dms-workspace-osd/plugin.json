@@ -2,7 +2,7 @@
   "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
   "id": "workspaceOsdFlash",
   "name": "Workspace OSD Flash",
-  "description": "Briefly shows the id and name of the workspace you just switched to, centered on that screen. Hyprland, niri, Mango, sway, Miracle WM, labwc and other ext-workspace compositors.",
+  "description": "Briefly shows the id and name of the workspace you just switched to, centered on that screen.",
   "version": "0.2.1",
   "author": "Ale Bles",
   "license": "MIT",
