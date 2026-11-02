@@ -287,7 +287,7 @@ PluginComponent {
     }
 
     // ---- popup ---------------------------------------------------------------------------------
-    DankFloatingWindow {
+    DFloatingWindow {
         id: win
 
         objectName: "workspaceSwapperModal"

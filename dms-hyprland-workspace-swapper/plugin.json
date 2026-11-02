@@ -1,9 +1,9 @@
 {
-  "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+  "$schema": "https://github.com/duxlabs-dev/dux-shell/raw/refs/heads/master/quickshell/PLUGINS/plugin-schema.json",
   "id": "workspaceSwapper",
   "name": "Hyprland Workspace Swapper",
   "description": "Popup that gives the current workspace a different number, swapping places with the workspace that already holds it and keeping the names in step.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Ale Bles",
   "license": "MIT",
   "icon": "swap_horiz",
@@ -18,7 +18,7 @@
     "settings_read",
     "settings_write"
   ],
-  "requires_dms": ">=1.6.0",
+  "requires_dms": ">=2.0.0",
   "category": "utilities",
   "dependencies": [],
   "registry": {

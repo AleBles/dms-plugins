@@ -1,6 +1,6 @@
 # OpenVPN 3
 
-A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) bar widget for the [openvpn3-linux](https://github.com/OpenVPN/openvpn3-linux) client. It shows the session status in the bar and connects, disconnects and imports profiles through the `openvpn3` command line tool.
+A [Dux Shell](https://github.com/duxlabs-dev/dux-shell) bar widget for the [openvpn3-linux](https://github.com/OpenVPN/openvpn3-linux) client. It shows the session status in the bar and connects, disconnects and imports profiles through the `openvpn3` command line tool.
 
 <p align="center">
   <img src="assets/screenshot.png" alt="OpenVPN 3 popout" width="600"/>
@@ -20,7 +20,7 @@ A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) bar widg
 
 ## Requirements
 
-- DankMaterialShell >= 1.6.0
+- Dux Shell (DMS) >= 2.0.0
 - [openvpn3-linux](https://openvpn.net/cloud-docs/owner/connectors/connector-user-guides/openvpn-3-client-for-linux.html) (`openvpn3` on `PATH`, the D-Bus services start on demand). Tested with v27.1
 - `xdg-open` for web authentication
 
@@ -41,8 +41,8 @@ Update later with `dms plugins update openvpn3`; remove with `dms plugins uninst
 ### Manual
 
 ```sh
-git clone https://github.com/AleBles/dms-widget-openvpn3 \
-  ~/.config/DankMaterialShell/plugins/openvpn3
+git clone https://github.com/AleBles/dms-plugins
+ln -s "$PWD/dms-plugins/dms-widget-openvpn3" ~/.config/dms/plugins/openvpn3
 dms restart
 ```
 
@@ -135,7 +135,7 @@ Untranslated terms fall back to English. Reload with `dms ipc call plugins reloa
 
 ## Registry entry
 
-`registry/alebles-dms-widget-openvpn3.json` is the entry for the [DMS plugin registry](https://github.com/AvengeMedia/dms-plugin-registry); it is generated from `plugin.json` with `bun scripts/registry.ts` (`--check` verifies it is current).
+`registry/alebles-dms-widget-openvpn3.json` is the entry for the [Dux Shell plugin registry](https://github.com/duxlabs-dev/dux-plugin-registry); it is generated from `plugin.json` with `bun scripts/registry.ts` (`--check` verifies it is current).
 
 ## License
 

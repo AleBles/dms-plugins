@@ -20,6 +20,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 import qs.Common
+import qs.DCommon.Common
 import qs.Services
 
 Item {
@@ -176,11 +177,11 @@ Item {
         onTriggered: root.refresh()
     }
 
-    // DankSocket rather than a bare Quickshell Socket: it reconnects with
+    // DSocket rather than a bare Quickshell Socket: it reconnects with
     // backoff, and works around a Socket that cannot redial after a failed
     // attempt. That matters here because the service may well start after the
     // shell does.
-    property DankSocket _socket: DankSocket {
+    property DSocket _socket: DSocket {
         id: socket
 
         path: root.socketPath

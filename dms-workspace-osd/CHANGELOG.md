@@ -3,6 +3,16 @@
 All notable changes to Workspace OSD Flash are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.2.2] - 2026-11-02
+
+### Changed
+- DankMaterialShell is now Dux Shell: the README, schema URL and install path (`~/.config/dms/plugins/`)
+  follow the new names. The `dms` command and `requires_dms` stay as they were.
+
+### Fixed
+- The shell's own windows are filtered out under the 2.0 app ID `dev.duxlabs.shell` too, not only the
+  old `com.danklinux.dms`.
+
 ## [0.2.1] - 2026-10-03
 
 ### Changed
