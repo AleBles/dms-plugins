@@ -1,6 +1,6 @@
 # Spotlight Tasks
 
-A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) launcher plugin for [Dagr](https://github.com/alebles/dagr): type `+` in the launcher to search your open tasks, add a new one from whatever you typed, and press Enter on a task to mark it done.
+A [Dux Shell](https://github.com/duxlabs-dev/dux-shell) launcher plugin for [Dagr](https://github.com/alebles/dagr): type `+` in the launcher to search your open tasks, add a new one from whatever you typed, and press Enter on a task to mark it done.
 
 <p align="center">
   <img src="assets/screenshot.png" alt="Spotlight Tasks in the DMS launcher" width="600"/>
@@ -21,7 +21,7 @@ A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) launcher
 
 ## Requirements
 
-- DankMaterialShell >= 1.6.0
+- Dux Shell (DMS) >= 2.0.0
 - [Dagr](https://github.com/alebles/dagr). It is not on Flathub or in any distro
   repository — build it from source, or download the `dagr.flatpak` bundle
   attached to the [latest release](https://github.com/alebles/dagr/releases/latest).
@@ -52,8 +52,8 @@ dms plugins install spotlightTasks
 ### Manual
 
 ```sh
-git clone https://github.com/AleBles/dms-spotlight-tasks \
-  ~/.config/DankMaterialShell/plugins/spotlight-tasks
+git clone https://github.com/AleBles/dms-plugins
+ln -s "$PWD/dms-plugins/dms-spotlight-tasks" ~/.config/dms/plugins/spotlight-tasks
 dms ipc call plugin-scan scan
 dms ipc call plugins enable spotlightTasks
 ```

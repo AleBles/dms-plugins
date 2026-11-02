@@ -1,6 +1,6 @@
 # dms-plugins
 
-Plugins for [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell), kept in one
+Plugins for [Dux Shell](https://github.com/duxlabs-dev/dux-shell), kept in one
 repository. Each directory is a self-contained plugin: DMS reads its `plugin.json` and QML directly,
 so a plugin works whether it is used from here or copied out on its own.
 
@@ -13,11 +13,11 @@ so a plugin works whether it is used from here or copied out on its own.
 
 ## Install one plugin
 
-DMS loads anything under `~/.config/DankMaterialShell/plugins/`, so a symlink is enough:
+DMS loads anything under `~/.config/dms/plugins/`, so a symlink is enough:
 
 ```sh
 git clone https://github.com/AleBles/dms-plugins
-ln -s "$PWD/dms-plugins/dms-hyprland-workspace-swapper" ~/.config/DankMaterialShell/plugins/hyprland-workspace-swapper
+ln -s "$PWD/dms-plugins/dms-hyprland-workspace-swapper" ~/.config/dms/plugins/hyprland-workspace-swapper
 dms restart
 dms ipc call plugins enable workspaceSwapper
 ```
@@ -40,7 +40,7 @@ bun run reload            # ask DMS to reload just this plugin
 ## Registry entries
 
 Every plugin keeps its submission for the
-[DMS plugin registry](https://github.com/AvengeMedia/dms-plugin-registry) in `registry/`, generated
+[Dux Shell plugin registry](https://github.com/duxlabs-dev/dux-plugin-registry) in `registry/`, generated
 from `plugin.json` by `scripts/registry.ts`. Because these plugins live in a monorepo, each entry
 carries a `path` pointing at its directory, and the screenshot URL includes that path. To submit one,
 copy its `registry/*.json` into a fork of the registry under `plugins/` and open a pull request.

@@ -26,6 +26,7 @@ import Quickshell.Io
 import qs.Common
 import qs.Services
 import qs.Widgets
+import qs.DCommon.Widgets
 import qs.Modals.Common
 import qs.Modals.FileBrowser
 import qs.Modules.Plugins
@@ -372,7 +373,7 @@ PluginComponent {
 
     pillRightClickAction: function () { root.toggle(); }
 
-    component PillIcon: DankIcon {
+    component PillIcon: DIcon {
         id: pillIconItem
         name: root.pillIcon
         color: root.pillColor
@@ -436,7 +437,7 @@ PluginComponent {
             anchors.leftMargin: Theme.spacingS
             anchors.verticalCenter: parent.verticalCenter
             spacing: Theme.spacingS
-            DankIcon { anchors.verticalCenter: parent.verticalCenter; name: row.icon; size: 16; color: row.tint }
+            DIcon { anchors.verticalCenter: parent.verticalCenter; name: row.icon; size: 16; color: row.tint }
             StyledText {
                 anchors.verticalCenter: parent.verticalCenter
                 width: parent.width - 16 - Theme.spacingS
@@ -465,7 +466,7 @@ PluginComponent {
                 width: 26
                 height: 26
                 anchors.verticalCenter: parent.verticalCenter
-                DankIcon {
+                DIcon {
                     anchors.centerIn: parent
                     name: "delete"
                     size: 16
@@ -483,9 +484,9 @@ PluginComponent {
                 width: row.showToggle ? 38 : (16 + Theme.spacingS)
                 height: 26
                 anchors.verticalCenter: parent.verticalCenter
-                DankSpinner { visible: row.busy && !row.showToggle; anchors.centerIn: parent; size: 14; strokeWidth: 2; color: Theme.primary }
-                DankIcon { visible: !row.busy && !row.showToggle && row.trailingIcon !== ""; anchors.centerIn: parent; name: row.trailingIcon; size: 16; color: row.tint }
-                DankToggle {
+                DSpinner { visible: row.busy && !row.showToggle; anchors.centerIn: parent; size: 14; strokeWidth: 2; color: Theme.primary }
+                DIcon { visible: !row.busy && !row.showToggle && row.trailingIcon !== ""; anchors.centerIn: parent; name: row.trailingIcon; size: 16; color: row.tint }
+                DToggle {
                     visible: row.showToggle
                     anchors.centerIn: parent
                     scale: 0.65

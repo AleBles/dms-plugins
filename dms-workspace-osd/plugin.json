@@ -1,9 +1,9 @@
 {
-  "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+  "$schema": "https://github.com/duxlabs-dev/dux-shell/raw/refs/heads/master/quickshell/PLUGINS/plugin-schema.json",
   "id": "workspaceOsdFlash",
   "name": "Workspace OSD Flash",
   "description": "Briefly shows the id and name of the workspace you just switched to, centered on that screen.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Ale Bles",
   "license": "MIT",
   "icon": "preview",

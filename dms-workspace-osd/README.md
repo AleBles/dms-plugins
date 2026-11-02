@@ -1,6 +1,6 @@
 # Workspace OSD Flash
 
-A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) daemon plugin that briefly shows the id and name of the workspace you just switched to, centered on that screen.
+A [Dux Shell](https://github.com/duxlabs-dev/dux-shell) daemon plugin that briefly shows the id and name of the workspace you just switched to, centered on that screen.
 
 <p align="center">
   <img src="assets/screenshot.png" alt="Workspace OSD card" width="600"/>
@@ -21,7 +21,7 @@ A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) daemon p
 
 ## Requirements
 
-- DankMaterialShell >= 1.6.0 (uses the plugin translation API introduced in 1.6.0)
+- Dux Shell (DMS) >= 1.6.0 (uses the plugin translation API introduced in 1.6.0)
 - One of the compositors below. A startup check refuses to enable the plugin anywhere else and shows the reason as a toast.
 
 | Compositor | Switch detection | Window list | Status |
@@ -57,7 +57,7 @@ older install switches over only after `dms plugins uninstall workspaceOsdFlash`
 
 ```sh
 git clone https://github.com/AleBles/dms-plugins
-ln -s "$PWD/dms-plugins/dms-workspace-osd" ~/.config/DankMaterialShell/plugins/workspace-osd-flash
+ln -s "$PWD/dms-plugins/dms-workspace-osd" ~/.config/dms/plugins/workspace-osd-flash
 dms restart
 ```
 

@@ -1,6 +1,6 @@
 # Hyprland Workspace Swapper
 
-A [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) plugin that gives the current
+A [Dux Shell](https://github.com/duxlabs-dev/dux-shell) plugin that gives the current
 workspace a different number. Free numbers are taken straight away; picking a number that is already
 in use swaps the two workspaces, so nothing ever becomes unreachable.
 
@@ -19,14 +19,14 @@ in use swaps the two workspaces, so nothing ever becomes unreachable.
 
 ## Requirements
 
-- DankMaterialShell >= 1.6.0
+- Dux Shell (DMS) >= 2.0.0
 - Hyprland. The renumbering uses Hyprland's `change_id` dispatcher, which other compositors do not have.
 
 ## Install
 
 ```sh
 git clone https://github.com/AleBles/dms-plugins
-ln -s "$PWD/dms-plugins/dms-hyprland-workspace-swapper" ~/.config/DankMaterialShell/plugins/hyprland-workspace-swapper
+ln -s "$PWD/dms-plugins/dms-hyprland-workspace-swapper" ~/.config/dms/plugins/hyprland-workspace-swapper
 dms restart
 ```
 

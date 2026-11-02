@@ -118,7 +118,7 @@ PluginComponent {
         root.showFlash(label, out, []);
         const finish = all => {
             // DMS's own toplevels (its hidden tray window etc.) are not windows the user cares about.
-            const entries = all.filter(e => e.appId !== "com.danklinux.dms" && e.appId !== "org.quickshell");
+            const entries = all.filter(e => e.appId !== "dev.duxlabs.shell" && e.appId !== "com.danklinux.dms" && e.appId !== "org.quickshell");
             const lines = Labels.summarize(entries.map(e => ({ name: root.appName(e.appId), title: e.title })), root.lineOpts);
             if (root.currentKey === ws.key && root.shown) root.apps = root.showApps ? lines : [];
             root.log.info("flash", JSON.stringify(label), "on", out || "all screens", "-", entries.length, "windows");
